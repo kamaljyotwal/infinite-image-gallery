@@ -1,12 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import PrimaryComponent from "./PrimaryComponent";
-import styled from "styled-components";
-
-const Maindiv = styled.div`
-  width: 80%;
-  margin: 0 auto;
-`;
 
 function App() {
   return (
@@ -15,9 +9,9 @@ function App() {
         <h1>Infinite Image Gallery</h1>
         <p>Developed by Kamal Jyotwal</p>
       </header>
-      <Maindiv>
+      <div className="maindiv">
         <PrimaryComponent />
-      </Maindiv>
+      </div>
     </div>
   );
 }
