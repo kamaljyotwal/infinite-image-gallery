@@ -8,7 +8,7 @@ import "./primarycomp.css";
 export default function PrimaryComponent() {
   const [imgs, setimgs] = useState([]);
   const [selectedImg, setSelectedImg] = useState(null);
-
+  // const [customid, setcustomid] = useState(0);
   useEffect(() => fetchingfunc(), []);
 
   const fetchingfunc = () => {
