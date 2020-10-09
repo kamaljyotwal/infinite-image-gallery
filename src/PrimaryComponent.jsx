@@ -8,10 +8,11 @@ import "./primarycomp.css";
 export default function PrimaryComponent() {
   const [imgs, setimgs] = useState([]);
   const [selectedImg, setSelectedImg] = useState(null);
-  // const [customid, setcustomid] = useState(0);
+
   useEffect(() => fetchingfunc(), []);
 
   const fetchingfunc = () => {
+    console.log("this");
     var link =
       "https://api.unsplash.com/photos/random?client_id=1K_oRGKchkQNsBTR4lFz15C1PgjUhrCyi-Y-AkRqdlo&count=30";
     fetch(link).then((res) => res.json().then((res) => setimgs([...imgs, ...res])));
@@ -24,7 +25,6 @@ export default function PrimaryComponent() {
     700: 2,
     500: 1,
   };
-
   return (
     <div>
       <InfiniteScroll

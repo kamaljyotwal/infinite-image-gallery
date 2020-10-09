@@ -17,9 +17,8 @@ export default function Modal(props) {
     <div className="backdrop" onClick={handleClick}>
       <motion.img
         src={props.selectedImg}
-        alt=""
         loading="eagar"
-        initial={{ y: "-80vh" }}
+        initial={{ y: "-100vh" }}
         animate={{ y: 0 }}
         transition={{ duration: 1 }}
       />

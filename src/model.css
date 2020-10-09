@@ -8,35 +8,38 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 .backdrop img {
-  max-height: auto;
+  max-height: 800px;
+  height: auto;
   max-width: 70%;
   display: block;
-  margin: 2rem auto;
+  margin: 3rem auto;
   border: 3px solid white;
 }
 
 .left {
   z-index: 10;
   font-size: 1.5rem;
-  padding: 1rem 1.4rem;
+  padding: 0.5rem 1rem;
   position: absolute;
   top: 50%;
   left: 5%;
   transform: translateX(-50%);
   border-radius: 50%;
   color: white;
-  background-color: black;
+  background-color: rgb(36, 35, 35);
+  outline: none;
 }
 
 .right {
   z-index: 10;
   font-size: 1.5rem;
   color: white;
-  background-color: black;
-  padding: 1rem 1.4rem;
+  background-color: rgb(36, 35, 35);
+  padding: 0.5rem 1rem;
   position: absolute;
   top: 50%;
   right: 2%;
   transform: translateX(-50%);
   border-radius: 50%;
+  outline: none;
 }
