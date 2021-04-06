@@ -8,11 +8,20 @@ import "./primarycomp.css";
 export default function PrimaryComponent() {
   const [imgs, setimgs] = useState([]);
   const [selectedImg, setSelectedImg] = useState(null);
+  const [loading, setloading] = useState(true);
 
-  useEffect(() => fetchingfunc(), []);
+  useEffect(() => {
+    fetchingfunc();
+    //eslint-disable-next-line
+  }, []);
+
+  // useEffect(() => {
+  //   setloading(false);
+  // }, [imgs]);
 
   const fetchingfunc = () => {
-    console.log("this");
+    setloading(true);
+    
     var link =
       "https://api.unsplash.com/photos/random?client_id=1K_oRGKchkQNsBTR4lFz15C1PgjUhrCyi-Y-AkRqdlo&count=30";
     fetch(link).then((res) => res.json().then((res) => setimgs([...imgs, ...res])));
@@ -33,7 +42,7 @@ export default function PrimaryComponent() {
         style={{ display: "flex", flexDirection: "column-reverse" }}
         hasMore={true}
       >
-        <Loader />
+        {loading && <Loader />}
         <Masonry
           breakpointCols={breakpointColumnsObj}
           className="my-masonry-grid"

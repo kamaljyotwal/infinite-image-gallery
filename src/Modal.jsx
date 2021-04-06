@@ -6,12 +6,12 @@ export default function Modal(props) {
   const handleClick = (e) => {
     props.setSelectedImg(null);
   };
-  const showLeftimg = () => {
-    console.log("left clicked");
-  };
-  const showRightimg = () => {
-    console.log("right clicked");
-  };
+  // const showLeftimg = () => {
+  //   console.log("left clicked");
+  // };
+  // const showRightimg = () => {
+  //   console.log("right clicked");
+  // };
 
   return (
     <div className="backdrop" onClick={handleClick}>
@@ -23,12 +23,12 @@ export default function Modal(props) {
         transition={{ duration: 1 }}
       />
 
-      <button className="left" onClick={showLeftimg}>
+      {/* <button className="left" onClick={showLeftimg}>
         &lt;
       </button>
       <button className="right" onClick={showRightimg}>
         &gt;
-      </button>
+      </button> */}
     </div>
   );
 }

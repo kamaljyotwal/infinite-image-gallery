@@ -2,7 +2,9 @@
   text-align: center;
   overflow-y: hidden;
   height: 90px;
+  /* border: 2px solid red; */
 }
+
 .lds-roller {
   display: inline-block;
   position: relative;
@@ -20,7 +22,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #474646;
+  background: #585858;
   margin: -4px 0 0 -4px;
 }
 .lds-roller div:nth-child(1) {
